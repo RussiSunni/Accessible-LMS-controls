@@ -1,0 +1,602 @@
+
+.construct-regular-H2 {
+    text-transform: none!important;
+    font-size: 1.4375em;
+    line-height: 1.75rem;
+    letter-spacing: 0.046875rem;
+    font-weight: 600;
+    color: var(--ic-brand-primary);
+}
+
+/* center aligned */
+.construct-flex-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* top aligned */
+.construct-flex-row-align-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+/* baseline aligned */
+.construct-flex-row-align-baseline {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+/* bottom aligned */
+.construct-flex-row-align-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.construct-flex-col {
+    flex: 50%;
+}
+
+.construct-flex-col-wide {
+    flex: 70%;
+}
+
+.construct-flex-col-narrow {
+    flex: 30%;
+}
+
+.construct-flex-col-wide {
+    flex: 70%;
+}
+
+.construct-flex-col-hundred-percent {
+    flex: 100%;
+}
+
+/*Responsive padding --------------------------------------- */
+.construct-left-column-padding
+{
+    padding-left: 50px;;
+}
+
+
+/*Keyboard Accessible Accordion --------------------------------------- */
+.construct-michigan-accessible-accordion .construct-michigan-element-toggler a{
+    font-size: 13pt;
+    letter-spacing: -0.0125rem;
+    line-height: 1.65;
+    border-bottom: 0.0625rem solid #EEEEEE;
+    padding: 1.3rem;
+    margin: 0;
+    display: block;
+    color: var(--ic-brand-primary);
+    /* color:#003E78; */
+    background-color: #F8F8F8;
+    position: relative;
+    margin: 0.5rem 0;
+    position: relative;
+    border-radius: 1rem;
+    text-decoration: none!important;
+  }  
+  
+  .construct-michigan-accessible-accordion .construct-michigan-element-toggler a:after {
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg width="19" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill-rule="nonzero" stroke="%239D9D9D" stroke-width="1.5" fill="none" stroke-linecap="square"><path d="M673,8 L673,24" transform="translate(-663.000000, -32.000000) translate(0.000000, 25.000000)"/><path d="M672.5,8.5 L672.5,24.5" transform="translate(-663.000000, -32.000000) translate(0.000000, 25.000000) translate(672.500000, 16.500000) rotate(-270.000000) translate(-672.500000, -16.500000)"/></g></svg>');
+    background-size: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.333rem;
+  }
+  
+  .construct-michigan-accessible-accordion .construct-michigan-element-toggler a[aria-expanded=false]:after {
+    background-image: url('data:image/svg+xml;utf8,<svg width="19" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill-rule="nonzero" stroke="%239D9D9D" stroke-width="1.5" fill="none" stroke-linecap="square"><path d="M673,8 L673,24" transform="translate(-663.000000, -32.000000) translate(0.000000, 25.000000)"/><path d="M672.5,8.5 L672.5,24.5" transform="translate(-663.000000, -32.000000) translate(0.000000, 25.000000) translate(672.500000, 16.500000) rotate(-270.000000) translate(-672.500000, -16.500000)"/></g></svg>');
+  }  
+  
+  .construct-michigan-accessible-accordion .construct-michigan-element-toggler a[aria-expanded=true]:after {
+    background-image: url('data:image/svg+xml;utf8,<svg width="19" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill-rule="nonzero" stroke="%239D9D9D" stroke-width="1.5" fill="none" stroke-linecap="square"><path d="M672.5,8.5 L672.5,24.5" transform="translate(-663.000000, -32.000000) translate(0.000000, 25.000000) translate(672.500000, 16.500000) rotate(-270.000000) translate(-672.500000, -16.500000)"/></g></svg>');
+  }  
+  
+  .construct-michigan-accessible-accordion-content  {
+    display: none;
+    padding: 0 1rem 1rem;
+  }
+  
+  /* .construct-michigan-accessible-accordion-content p {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.0625rem 0.45rem 0 rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+    font-size: 11pt;
+  } */
+  
+  .construct-michigan-accessible-accordion-content.active
+  {
+    display: block;
+  }
+
+
+
+/* ------------------------ */
+
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .construct-flex-row-align-top, .construct-flex-row-align-baseline {
+        flex-direction: column;
+      }
+
+    .construct-left-column-padding {
+        padding-left: unset;
+    }
+  }
+
+@media (max-width: 600px) {
+    .construct-flex-row {
+      flex-direction: column;
+    }   
+  }
+  
+/* ----------------------------------------- accessible tabs -------------------------------------------------------- */
+
+.construct-accessible-tablist li[aria-selected="true"] {
+    color: white;
+    background-color: #fff;
+    border-bottom: 1px solid white;
+  }
+  
+  .construct-accessible-tabs div[aria-hidden="true"] {
+    display: none;
+  }
+  
+  .construct-accessible-tablist {
+    margin: 0 0px;
+    padding: 0;
+    list-style: none;
+    color: white;
+  }
+  
+  .construct-accessible-tablist li[aria-selected="true"] {
+    background-color: #fff;
+    border-bottom: 1px solid white;
+  }
+  
+  .construct-accessible-tab {
+    float: left;
+    display: inline;
+    line-height: 2.5em;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    margin: 0 0.2em 1px 0;
+    border-bottom: 0 !important;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  
+  .construct-accessible-tabs div[aria-hidden="false"] {
+    display: block;
+  }
+  
+  .construct-accessible-panel {
+    clear: both;
+    display: block;
+    margin: 0 0 0 0;
+    padding: 10px;
+    border-color: #c7cdd1;
+    padding: 14px;
+    background-color: #fff;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+  }
+  
+  .construct-accessible-tab:hover {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  .construct-accessible-tab span {
+    cursor: pointer;
+  }
+  
+  .construct-accessible-tablist li[aria-selected="true"] span{
+    cursor: text;
+  }  
+  
+  .construct-accessible-lettertab span:hover {
+    opacity: 0.6;
+  }  
+  
+  .construct-accessible-lettertab {
+      padding: 10px 15px;
+      border-top: 1px solid #c7cdd1;
+      border-right: 1px solid #c7cdd1;
+      border-left: 1px solid #c7cdd1;
+      margin: 0 0.2em 0px 0!important;
+  }
+  
+  .construct-accessible-lettertab:hover {
+    color: #000!important;
+  }  
+   
+  
+   @media (max-width: 1024px) {
+  
+    .construct-accessible-tab {
+      line-height: unset;
+    }
+    
+    .construct-accessible-lettertab img {
+      width: 90px!important;
+      height: 90px!important;
+    }
+  
+    .construct-accessible-lettertab {
+      padding: 10px 8px;
+    }   
+  }
+  
+  
+   @media (max-width: 768px) {
+   
+  .lettertabslist {
+    max-width: 500px;
+  }
+  
+   .construct-accessible-lettertab {
+    width: 135.06px;   
+    height: unset!important;
+    padding: 10px 4px;
+    }   
+  }
+    
+
+/* ----------------------------------------- callout/note boxes -------------------------------------------------------- */
+
+.construct-note-box p, 
+.construct-note-box h2, 
+.construct-note-box h3, 
+.construct-note-box li{
+    color: black!important;
+}
+
+
+/* ----------------------------------------- tables with same font size as ps and lis -------------------------------------------------------- */
+
+.construct-table-font-size {
+    font-size: 1.0625rem;
+}
+
+
+/* --------------------- slighlty bolder text. Canvas is now stripping this from inline CSS ---------------------*/
+
+.construct-font-weight-600 {
+    font-weight: 600;
+}
+
+.construct-font-weight-400 {
+    font-weight: 400;
+}
+
+
+
+
+/* --------------------- ES515/BA535 module overview page template mockup ------------class names will be improved---------*/
+
+.construct-module-overview-grid-item
+{
+	position: relative;
+}
+
+.construct-module-overview-grid-item:hover
+{
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    background-color: #001A37;
+    transition: .5s ease;
+}
+
+.construct-module-overview-grid-icon {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+.construct-module-overview-grid-icon-top-right {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.construct-module-overview-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-auto-rows: minmax(190px, 1fr);
+    grid-gap: 1px;
+    padding-bottom: 1px;
+    position: inherit;
+}
+
+.construct-theme-light-teal {
+    background-color: #b9d3d2;
+}
+
+.construct-theme-dark-teal {
+    background-color: #8dbebc;
+}
+
+
+.construct-module-overview-grid-item:hover img {
+    filter: invert(90%) sepia(99%) saturate(30%) hue-rotate(190deg) brightness(108%) contrast(99%);
+}
+
+/* preload images that are shown on hover - doesnt yet work on Safari */
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+	content: url('https://umich.instructure.com/files/19631350/download?download_frd=1') url('https://umich.instructure.com/files/19631543/download?download_frd=1') url('https://umich.instructure.com/files/19631556/download?download_frd=1') url('https://umich.instructure.com/files/19631573/download?download_frd=1')  url('https://umich.instructure.com/files/19656088/download?download_frd=1') url('https://umich.instructure.com/files/19656109/download?download_frd=1') url('https://umich.instructure.com/files/19656118/download?download_frd=1') url('https://umich.instructure.com/files/19656164/download?download_frd=1')
+    url('https://umich.instructure.com/files/19656155/download?download_frd=1') url('https://umich.instructure.com/files/19656350/download?download_frd=1') url('https://umich.instructure.com/files/19677883/download?download_frd=1') url('https://umich.instructure.com/files/19677911/download?download_frd=1')
+    url('https://umich.instructure.com/files/19677917/download?download_frd=1') url('https://umich.instructure.com/files/19677936/download?download_frd=1') url('https://umich.instructure.com/files/19677934/download?download_frd=1') url('https://umich.instructure.com/files/19677938/download?download_frd=1');
+ }
+
+/* make subheader readable against semi-transparent image background */
+.construct-tile-subheader {
+    font-weight: 500;
+}
+
+/* background images for module overview pages*/
+/* lightbulb */
+.construct-tile-background-image-01 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631388/download?download_frd=1');
+}
+.construct-tile-background-image-01:hover {
+	background-size: cover;
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19631350/download?download_frd=1');
+}
+/* .construct-tile-background-image-01-no-hover {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631388/download?download_frd=1');
+} */
+
+/* lean startup */
+.construct-tile-background-image-02 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631548/download?download_frd=1');
+}
+.construct-tile-background-image-02:hover {
+	background-size: cover;
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19631543/download?download_frd=1');
+}
+/* .construct-tile-background-image-02-no-hover {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631548/download?download_frd=1');
+} */
+
+/* jobs to be done */
+.construct-tile-background-image-03 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631561/download?download_frd=1');
+}
+.construct-tile-background-image-03:hover {
+	background-size: cover;
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19631556/download?download_frd=1');
+}
+/* .construct-tile-background-image-03-no-hover {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631561/download?download_frd=1');
+} */
+
+/* jobs to be done */
+.construct-tile-background-image-04 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631585/download?download_frd=1');
+}
+.construct-tile-background-image-04:hover {
+	background-size: cover;
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19631573/download?download_frd=1');
+}
+/* .construct-tile-background-image-04-no-hover {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19631585/download?download_frd=1');
+} */
+
+/*B2 How to use LucidSpark */
+.construct-tile-background-image-05 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656089/download?download_frd=1');
+}
+.construct-tile-background-image-05:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656088/download?download_frd=1');
+}
+/*C1 Introduction to Empathy Mapping */
+.construct-tile-background-image-06 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656108/download?download_frd=1');
+}
+.construct-tile-background-image-06:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656109/download?download_frd=1');
+}
+/*C2 Activity: Empathy Mapping */
+.construct-tile-background-image-07 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656117/download?download_frd=1');
+}
+.construct-tile-background-image-07:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656118/download?download_frd=1');
+}
+/*D1 Introduction to How Might We */
+.construct-tile-background-image-08 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656163/download?download_frd=1');
+}
+.construct-tile-background-image-08:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656164/download?download_frd=1');
+}
+/*D2 Activity: How Might We */
+.construct-tile-background-image-09 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656154/download?download_frd=1');
+}
+.construct-tile-background-image-09:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656155/download?download_frd=1');
+}
+/*F1 Tell Your Story */
+.construct-tile-background-image-10 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19656349/download?download_frd=1');
+}
+.construct-tile-background-image-10:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19656350/download?download_frd=1');
+}
+/*F3 Share Your Experience */
+.construct-tile-background-image-11 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677882/download?download_frd=1');
+}
+.construct-tile-background-image-11:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677883/download?download_frd=1');
+}
+/*E1 Introduction to Solution Generation */
+.construct-tile-background-image-12 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677910/download?download_frd=1');
+}
+.construct-tile-background-image-12:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677911/download?download_frd=1');
+}
+/*E2 Activity: Solution Generation */
+.construct-tile-background-image-13 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677922/download?download_frd=1');
+}
+.construct-tile-background-image-13:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677917/download?download_frd=1');
+}
+/*B1 Introduction to Five Ideas */
+.construct-tile-background-image-14 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677935/download?download_frd=1');
+}
+.construct-tile-background-image-14:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677936/download?download_frd=1');
+}
+/*B3 Five Ideas Idea Board */
+.construct-tile-background-image-15 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677933/download?download_frd=1');
+}
+.construct-tile-background-image-15:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677934/download?download_frd=1');
+}
+/*F2 Conclusion */
+.construct-tile-background-image-16 {
+	background-color: #72B4D3;
+	background-size: cover;
+	transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19677937/download?download_frd=1');
+}
+.construct-tile-background-image-16:hover {
+	transition: 0.3s;
+	background-image: url('https://umich.instructure.com/files/19677938/download?download_frd=1');
+}
+
+/* preload images that are shown on hover - doesnt yet work on Safari */
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+	content: url('https://umich.instructure.com/files/19958255/download?download_frd=1') url('https://umich.instructure.com/files/19958272/download?download_frd=1') url('https://umich.instructure.com/files/19959875/download?download_frd=1') url('https://umich.instructure.com/files/19960396/download?download_frd=1');
+ }
+
+.construct-tile-background-BA535-M1B1:hover {
+    background-color: #7dcec9;
+	background-size: cover;
+    transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19958255/download?download_frd=1');
+}
+
+.construct-tile-background-BA535-M1C1:hover {
+    background-color: #7dcec9;
+	background-size: cover;
+    transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19958272/download?download_frd=1');
+}
+
+.construct-tile-background-BA535-M1D1:hover {
+    background-color: #7dcec9;
+	background-size: cover;
+    transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19959875/download?download_frd=1');
+}
+
+.construct-tile-background-BA535-M1E1:hover {
+    background-color: #7dcec9;
+	background-size: cover;
+    transition: all .2s ease-in;
+	background-image: url('https://umich.instructure.com/files/19960396/download?download_frd=1');
+}
+
+
+.cdk-grid-block:hover .construct-no-text-on-hover {
+    opacity: 0;
+}
+
